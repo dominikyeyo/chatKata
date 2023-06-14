@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">chatKata</string>
+
+    <string name="api_key">nqycqfucqzrn</string>
+    <string name="jwt_token">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZGllZ29udW5leiJ9.c3iCvM-1S9hbr9G5G7pHT8n-Y93KVigvsm73A8JMV9U</string>
+    <!-- diegonunez -->
+
+    <string name="frankendroid_route">Frankendroid</string>
+    <string name="pumpkin_screen_route">Pumpkin</string>
+    <string name="ghost_screen_route">Ghost</string>
+    <string name="scary_bag_screen_route">ScaryBag</string>
+</resources>
