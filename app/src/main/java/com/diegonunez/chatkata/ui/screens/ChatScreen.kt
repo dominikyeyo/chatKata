@@ -1,11 +1,7 @@
-package com.diegonunez.chatkata.ui
+package com.diegonunez.chatkata.ui.screens
 
-import android.content.Intent
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.AlertDialog
@@ -18,40 +14,22 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat.startActivity
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.diegonunez.chatkata.MainActivity
 import com.diegonunez.chatkata.ui.activity.MessagesActivity
 import com.diegonunez.chatkata.ui.viewmodels.ChannelListViewModel
 import io.getstream.chat.android.client.models.Filters
 import io.getstream.chat.android.compose.ui.channels.ChannelsScreen
-import io.getstream.chat.android.compose.ui.theme.ChatTheme
 
 @Composable
-fun HomeScreen2(
+fun ChatScreen(
     viewModel : ChannelListViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
     var showDialog: Boolean by remember {
         mutableStateOf(false)
     }
-
-
-
-    /*
-    Column(
-        modifier = Modifier.fillMaxSize()
-            .background(Color.LightGray)
-    ) {
-        Text(text = "Home Screen2", fontSize = 20.sp)
-    }
-    */
-
 
     if (showDialog) {
         CreateChannelDialog(

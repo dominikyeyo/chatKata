@@ -3,6 +3,7 @@ package com.diegonunez.chatkata.ui.activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -27,19 +28,20 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.diegonunez.chatkata.ui.BottomBarScreen
-import com.diegonunez.chatkata.ui.BottomNavGraph
-import com.diegonunez.chatkata.ui.theme.AnimatedSplashScreenDemoTheme
+import com.diegonunez.chatkata.ui.screens.BottomBarScreen
+import com.diegonunez.chatkata.ui.screens.BottomNavGraph
+import com.diegonunez.chatkata.ui.viewmodels.MainScreenViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import io.getstream.chat.android.compose.ui.theme.ChatTheme
 
 @AndroidEntryPoint
 class MainScreenActivity: ComponentActivity() {
+    private val contactViewModel: MainScreenViewModel by viewModels()
 
     //private val viewModel: LoginViewModel by viewModels()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //contactViewModel.loadContacts(context = this)
         //subscribeToEvents()
         setContent {
             ChatTheme {
@@ -65,8 +67,8 @@ class MainScreenActivity: ComponentActivity() {
     @Composable
     fun BottomBar(navController: NavHostController) {
         val screens = listOf(
-            BottomBarScreen.Home,
-            BottomBarScreen.Report,
+            BottomBarScreen.Chats,
+            BottomBarScreen.Contacts,
             BottomBarScreen.Profile
         )
 

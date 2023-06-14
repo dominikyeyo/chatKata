@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.diegonunez.chatkata">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -27,6 +28,7 @@
         <activity android:name=".ui.activity.LoginActivity"/>
         <activity android:name=".ui.activity.MainScreenActivity"/>
         <activity android:name=".ui.activity.ChannelListActivity"/>
+        <activity android:name=".ui.activity.ChatActivity"/>
         <activity android:name=".ui.activity.MessagesActivity"
             android:windowSoftInputMode="adjustResize" />
 

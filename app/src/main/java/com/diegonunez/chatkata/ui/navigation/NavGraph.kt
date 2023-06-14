@@ -6,19 +6,12 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.key.Key.Companion.Home
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-//->import com.diegonunez.chatkata.ui.BottomNav
-import com.diegonunez.chatkata.ui.HomeScreen
-import com.diegonunez.chatkata.ui.HomeScreen2
-
 import com.diegonunez.chatkata.ui.activity.LoginActivity
-//import com.diegonunez.chatkata.ui.LoginScreen
 import com.diegonunez.chatkata.ui.theme.AnimatedSplashScreen
-import com.diegonunez.chatkata.ui.viewmodels.ProfileScreen
 
 @Composable
 fun SetupNavGraph(navController: NavHostController) {
@@ -48,7 +41,7 @@ fun SetupNavGraph(navController: NavHostController) {
 
             /*
             Box(modifier = Modifier.fillMaxSize()){
-                Text("Welcome Home")
+                Text("Welcome Chats")
             }
             */
         composable(route = Screen.Profile.route) {
@@ -63,7 +56,7 @@ fun SetupNavGraph(navController: NavHostController) {
         /*
             ProfileScreen(navController = navController)
             Box(modifier = Modifier.fillMaxSize()){
-                Text("Welcome Home")
+                Text("Welcome Chats")
             }
             */
 

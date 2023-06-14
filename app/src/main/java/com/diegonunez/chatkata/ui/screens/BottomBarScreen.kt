@@ -1,4 +1,4 @@
-package com.diegonunez.chatkata.ui
+package com.diegonunez.chatkata.ui.screens
 
 import com.diegonunez.chatkata.R
 
@@ -11,16 +11,16 @@ sealed class BottomBarScreen(
 ) {
 
     // for home
-    object Home: BottomBarScreen(
-        route = "home",
+    object Chats: BottomBarScreen(
+        route = "chats",
         title = "Chats",
         icon = R.drawable.ic_bottom_chat,
         icon_focused = R.drawable.ic_bottom_chat_focused
     )
 
     // for report
-    object Report: BottomBarScreen(
-        route = "report",
+    object Contacts: BottomBarScreen(
+        route = "contacts",
         title = "New",
         icon = R.drawable.ic_bottom_new_chat,
         icon_focused = R.drawable.ic_bottom_new_chat_focused
